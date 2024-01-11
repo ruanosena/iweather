@@ -5,7 +5,7 @@ import clearDay from "@assets/clear_day.svg";
 
 describe("Component: Day", () => {
 	it("should be rendered", () => {
-		const { debug } = render(
+		render(
 			<Day
 				data={{
 					day: "18/01",
@@ -17,6 +17,6 @@ describe("Component: Day", () => {
 			/>
 		);
 
-		debug();
+		expect(screen.getByText("18/01")).toBeTruthy();
 	});
 });
